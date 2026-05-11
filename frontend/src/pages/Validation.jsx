@@ -22,7 +22,7 @@ export default function ValidationPage() {
     const saveHistory = async () => {
       try {
         await axios.post(
-          "http://localhost:8080/history",
+          "https://ai-based-document-validator.onrender.com///history",
           {
             image: fileDetails.filePath,
             explanation,

@@ -71,7 +71,7 @@ useState("validation");
     });
 
     uppy.use(Tus, {
-      endpoint: "http://localhost:8080/upload/file",
+      endpoint: "https://ai-based-document-validator.onrender.com/upload/file",
     });
 
     uppy.on("file-added", (file) => {
@@ -82,13 +82,13 @@ useState("validation");
       try {
         const uploadedFile =
           response?.body?.filePath ||
-          response?.uploadURL?.replace("http://localhost:8080", "");
+          response?.uploadURL?.replace("https://ai-based-document-validator.onrender.com", "");
 
         if (!uploadedFile) return;
 
         // 🔥 Save history
         await axios.post(
-          "http://localhost:8080/history",
+          "https://ai-based-document-validator.onrender.com",
           {
             image: uploadedFile,
             explanation:
@@ -317,7 +317,7 @@ useState("validation");
         const res =
         await axios.post(
 
-          "http://localhost:8080/api/student/upload-answer-sheet",
+          "https://ai-based-document-validator.onrender.com/api/student/upload-answer-sheet",
 
           formData,
 

@@ -21,7 +21,9 @@ const studentAnswerRoutes =require("./routes/studetanswerroute");
 
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 app.use(express.json());
 
 // Serve uploaded files BEFORE routes

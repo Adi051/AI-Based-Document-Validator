@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080";
+const API_URL = "https://ai-based-document-validator.onrender.com";
 
 // AUTH
 export const signupUser = (data) =>
@@ -81,7 +81,7 @@ export const updateInstitutionStatus = (id, status) => {
 /// SETTINGS
 export const getMySettings = () => {
   const token = localStorage.getItem("token");
-  return fetch("http://localhost:8080/settings/me", {
+  return fetch("https://ai-based-document-validator.onrender.com/settings/me", {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -90,7 +90,7 @@ export const getMySettings = () => {
 
 export const updateMySettings = (data) => {
   const token = localStorage.getItem("token");
-  return fetch("http://localhost:8080/settings/me", {
+  return fetch("https://ai-based-document-validator.onrender.com/settings/me", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

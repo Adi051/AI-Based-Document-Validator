@@ -17,7 +17,7 @@ const getFileType = (path) => {
 const formatFilePath = (path) => {
   if (!path) return "https://via.placeholder.com/300x200?text=No+Preview";
   if (path.startsWith("http")) return path;
-  return `http://localhost:8080${path}`;
+  return `https://ai-based-document-validator.onrender.com${path}`;
 };
 
 const HistoryPage = () => {
@@ -30,7 +30,7 @@ const HistoryPage = () => {
 
   const fetchHistory = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/history/me", {
+      const res = await axios.get("https://ai-based-document-validator.onrender.com/history/me", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -47,7 +47,7 @@ const HistoryPage = () => {
     if (!window.confirm("Are you sure you want to delete this record?")) return;
 
     try {
-      const res = await axios.delete(`http://localhost:8080/history/${id}`, {
+      const res = await axios.delete(`https://ai-based-document-validator.onrender.com/history/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
