@@ -1,4 +1,5 @@
 backend/.env
+frontend/.env
 backend/test.js
 frontend/public/assets/js/pages/leaflet-map.init.js
 node_modules
