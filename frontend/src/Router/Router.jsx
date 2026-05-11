@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import Clientview from "../layouts/clientview";
+import Clientview from "../layouts/Clientview";
 import Dashboard from "../pages/Dashboard";
 import Uploads from "../pages/uploads";
 import HistoryPage from "../pages/History";
