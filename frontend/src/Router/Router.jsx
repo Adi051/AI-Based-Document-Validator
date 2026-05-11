@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Clientview from "../layouts/Clientview";
 import Dashboard from "../pages/Dashboard";
-import Uploads from "../pages/uploads";
+import Uploads from "../pages/Uploads";
 import HistoryPage from "../pages/History";
 import Home from "../pages/Home";
 import { Signup } from "../pages/Signup";
